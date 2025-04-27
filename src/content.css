@@ -1,0 +1,51 @@
+/* Add your custom styles here */
+
+/* Global styles for Leetcode Coach extension */
+.leetcode-coach-analysis,
+.leetcode-coach-hints,
+.leetcode-coach-complexity {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+}
+
+.leetcode-coach-analysis h3,
+.leetcode-coach-hints h3,
+.leetcode-coach-complexity h3 {
+    margin: 0;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+.leetcode-coach-analysis h4,
+.leetcode-coach-hints h4,
+.leetcode-coach-complexity h4 {
+    margin: 10px 0 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.leetcode-coach-analysis p,
+.leetcode-coach-hints p,
+.leetcode-coach-complexity p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.leetcode-coach-analysis ul,
+.leetcode-coach-hints ul,
+.leetcode-coach-complexity ul,
+.leetcode-coach-analysis ol,
+.leetcode-coach-hints ol,
+.leetcode-coach-complexity ol {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.close-btn {
+    color: #666;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #333;
+} 
