@@ -1,25 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all buttons
-    const analyzeProblemBtn = document.getElementById('analyzeProblem');
-    const showHintsBtn = document.getElementById('showHints');
-    const timeComplexityBtn = document.getElementById('timeComplexity');
+    // Get the status button
+    const statusBtn = document.getElementById('status');
 
-    // Add click event listeners
-    analyzeProblemBtn.addEventListener('click', () => {
+    // Function to check if we're on a LeetCode problem page
+    function checkProblemPage() {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {action: "analyzeProblem"});
-        });
-    });
+            if (!tabs || !tabs.length || !tabs[0]?.url) {
+                console.error('No valid tab found');
+                return;
+            }
 
-    showHintsBtn.addEventListener('click', () => {
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {action: "showHints"});
+            const isProblemPage = tabs[0].url.includes('/problems/');
+            if (isProblemPage) {
+                statusBtn.textContent = 'On Problem Page';
+                statusBtn.style.backgroundColor = '#4CAF50';
+            } else {
+                statusBtn.textContent = 'Not on Problem Page';
+                statusBtn.style.backgroundColor = '#f44336';
+            }
         });
-    });
+    }
 
-    timeComplexityBtn.addEventListener('click', () => {
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {action: "checkTimeComplexity"});
-        });
-    });
+    // Check the current page status
+    checkProblemPage();
 }); 

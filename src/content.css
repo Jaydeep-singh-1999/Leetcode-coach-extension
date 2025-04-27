@@ -1,6 +1,9 @@
-/* Add your custom styles here */
-
-/* Global styles for Leetcode Coach extension */
+body {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+  }
+  
+/* Global styles for LeetCode Coach extension */
 .leetcode-coach-analysis,
 .leetcode-coach-hints,
 .leetcode-coach-complexity {
@@ -48,4 +51,5 @@
 
 .close-btn:hover {
     color: #333;
-} 
+}
+  

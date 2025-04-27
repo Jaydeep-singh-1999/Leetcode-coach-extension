@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Leetcode Coach</title>
+    <title>LeetCode Coach</title>
     <style>
         body {
             width: 300px;
@@ -17,31 +17,33 @@
             height: 48px;
             margin-bottom: 10px;
         }
-        .button {
+        .status {
             width: 100%;
             padding: 10px;
             margin: 5px 0;
-            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 4px;
-            cursor: pointer;
             font-size: 14px;
+            text-align: center;
         }
-        .button:hover {
-            background-color: #45a049;
+        .description {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="icon.png" alt="Leetcode Coach Logo" class="logo">
-        <h2>Leetcode Coach</h2>
+        <img src="icon48.png" alt="LeetCode Coach Logo" class="logo">
+        <h2>LeetCode Coach</h2>
     </div>
-    <button class="button" id="analyzeProblem">Analyze Current Problem</button>
-    <button class="button" id="showHints">Show Hints</button>
-    <button class="button" id="timeComplexity">Check Time Complexity</button>
-    
+    <button class="status" id="status">Checking...</button>
+    <div class="description">
+        This extension helps you think about your approach before coding. When you visit a LeetCode problem page, you'll need to explain your approach before you can start coding.
+    </div>
     <script src="popup.js"></script>
 </body>
 </html> 
